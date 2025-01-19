@@ -1,0 +1,48 @@
+extends template
+
+block nav 
+    nav 
+        +createMenu(dictMenu, 'Главная') 
+         
+block content 
+    div.images 
+        each pict in listImages 
+            a(href= "building.html") 
+                img(src= require("./images/" + pict)) 
+ 
+    article 
+      .info
+        .info__box
+            .box-header
+                img(src= require("./images/rezero.jpg"))
+            h3 Re:Zero
+            p Аниме «Re: Zero — жизнь с нуля в другом мире» рассказывает о старшекласснике Субару Нацуки, который однажды ночью решает отправиться в магазин. На обратном пути вместо
+                | дома он загадочным образом попадает в альтернативный мир. Оказавшись в другом измерении, он тут же находит неприятности, но ему на помощь приходит прекрасная
+                | эльфийка, в которую герой тут же влюбляется. Не желая расставаться с прекрасной девушкой, Субару присоединяется к поискам украденной у неё вещи.
+                | Героям удалось выйти на след вора, но добраться до вещи не удалось: их убивают. На этом история могла закончиться, но внезапно Субару вновь оказался на той улице.
+        .info__box.info__box--right
+            .info__box__right
+                .test__box__right__foto
+                    img(src= require("./images/deathnote.jpg"))
+                .box-header-right
+                    h3 Тетрадь смерти
+                    p Боги любят яблоки. Рекомендуем к просмотру!
+            .info__box__right
+                .test__box__right__foto
+                    img(src= require("./images/deathnote.jpg"))
+                .box-header-right
+                    h3 Тетрадь смерти
+                    p Боги любят яблоки. Рекомендуем к просмотру!
+            .info__box__right
+                .test__box__right__foto
+                    img(src= require("./images/deathnote.jpg"))
+                .box-header-right
+                    h3 Тетрадь смерти
+                    p Боги любят яблоки. Рекомендуем к просмотру!
+            .info__box__right
+                .test__box__right__foto
+                    img(src= require("./images/deathnote.jpg"))
+                .box-header-right
+                    h3 Тетрадь смерти
+                    p Боги любят яблоки. Рекомендуем к просмотру!
+

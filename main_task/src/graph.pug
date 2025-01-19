@@ -1,0 +1,18 @@
+extends template
+
+block header
+    h2= title_graph
+
+block nav 
+    nav 
+        +createMenu(dictMenu, 'Таблица')
+
+block content 
+        
+        +graphBlock("График",xValues,yValues)
+        
+        +filterBlock("Фильтр", filters)
+
+        +sortBlock("Сортировка", sorts)
+
+        +tableBlock(tableInfo)

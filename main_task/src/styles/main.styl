@@ -1,0 +1,226 @@
+back(size) 
+  background-color #f1f1f1 
+  box-shadow 4px 5px 10px rgba(0, 0, 0, 0.4) 
+  padding: size + "%" 
+  margin 0 0 1% 0 
+
+colorText = #6f6d6d 
+
+h2
+  text-align center
+
+html 
+  color colorText
+
+.menu
+  box-sizing border-box
+  background-color lightgray
+  height 50px
+  display flex
+  align-items center
+  padding 0 10px
+  flex-wrap wrap
+
+.menu__item
+  font-size 26px
+  white-space nowrap
+  
+.menu__link
+  font-size 26px
+  white-space nowrap
+  text-decoration none
+  display inline-block
+  transition all 0.3s ease
+  &:hover
+    color red
+
+
+.menu__item
+    text-align center
+    margin 10px
+    cursor pointer
+    overflow hidden
+    flex 0.2 0 auto
+    min-width 100px
+    transition all 0.3s ease
+    &:hover
+      background-color pink
+      color red
+
+.menu__item--left
+  text-align left
+  flex 0.4 0 auto
+  transition all 0.3s ease
+  &:hover
+    background-color pink
+    color white
+
+div.images 
+  display grid 
+  grid-template-columns 25% 50% 25% 
+  grid-gap 0.3% 
+  back(1) 
+    
+  & img 
+    width 100%
+    height 300px
+    object-fit fill
+  img:hover
+     transform scale(1.1)
+
+.info
+  width 90%
+  margin 10px 5%
+  display grid
+  grid-template-columns 1fr 1fr
+  gap 1%
+
+.info__box
+  background-color white
+  border 2px solid #e0e0e0
+  text-align center
+  padding 10px
+  box-sizing border-box
+  overflow hidden
+
+.info__box--right
+    border 0
+    display grid
+    grid-template-rows repeat(4, 1fr)
+    gap 10px
+
+.box-header
+  display flex
+  justify-content center
+  margin-bottom 10px
+
+.box-header img
+  height 70px
+
+.info__box__right
+  display grid
+  grid-template-columns 40% 1fr
+  align-items center
+  background-color lightgrey
+  padding 5px
+  box-sizing border-box
+
+.test__box__right__foto
+  margin-right 10px
+
+.test__box__right__foto img
+  width 100%
+  height 150px
+  object-fit fill
+
+.box-header-right
+  text-align left
+
+.box-header-right h3
+  margin-top 0
+  font-size 18px
+
+.box-header-right p
+  margin-top 0
+  text-align justify
+  line-height 1.1
+
+h3
+  margin 10px 0
+  font-size 18px
+  text-align center
+
+p
+  line-height 1.5
+  text-align justify
+
+footer 
+  background-color colorText 
+
+  & h4 
+    padding 5px 
+    color #f8f8f8
+
+.container
+    width: 90%
+    padding 20px
+
+.row
+    display flex
+    align-items left
+    width 100%
+
+.main-block
+  gap 20px
+
+.anime-block
+    margin 20px 0
+    gap 20px
+
+.reversed-block
+  flex-direction row-reverse
+
+.image-container
+  img
+    width 300px
+    height auto
+  img:hover
+     transform scale(1.1) 
+.text-container
+  width 80%
+
+.centered-paragraph
+    width 75%
+    margin 0 auto
+    text-align justify
+
+.centered-title
+  text-align center
+
+@media screen and (max-width: 650px)
+	div.images
+		grid-template-columns 1fr
+
+@media screen and (max-width: 650px)
+  .cont
+    flex-direction: column
+
+    p
+      text-align center
+      width: 100%
+
+@media screen and (max-width: 768px)
+  .info
+    grid-template-columns 1fr // Перестраиваем в один столбец
+
+@media screen and (max-width: 576px)
+  .info__box__right
+     grid-template-columns 1fr 
+     text-align center 
+    .test__box__right__foto
+      margin-right 0 
+      margin-bottom 10px 
+    .box-header-right
+        text-align center 
+
+@media screen and (max-width: 768px)
+  .row
+    flex-direction column 
+    align-items center
+    gap 10px
+
+  .image-container
+     img
+       width 100% 
+  .text-container
+      width 100%
+      text-align justify 
+  
+  .menu
+    flex-direction column 
+    align-items flex-start 
+    height auto 
+
+  a
+      display block 
+      text-align left 

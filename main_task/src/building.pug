@@ -1,0 +1,32 @@
+extends template 
+
+block header
+    h2= structures[0].menuItem
+
+block nav 
+ 
+    nav 
+        +createMenu(dictMenu, 'Топ аниме')  
+     
+block content 
+ 
+    .container
+      .row.main-block
+        .image-container
+          img(src= require("./images/" + structures[0].pict)) 
+        .text-container
+          p= structures[0].firstP
+          p= structures[0].secondP
+
+    .container
+        h2.centered-title Похожие аниме
+        .row.anime-block
+            .image-container
+                img(src= require("./images/" + structures[1].pict)) 
+            .text-container
+                p= structures[1].firstP
+        .row.anime-block.reversed-block
+            .image-container
+                img(src= require("./images/" + structures[2].pict)) 
+            .text-container
+                p= structures[2].secondP
